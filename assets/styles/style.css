@@ -144,7 +144,7 @@ body {
     border: 1.5px solid #2D2E3D33;
     min-height: 280px;
     cursor: pointer;
-    transition: all;
+    transition: .3s;
 }
 
 .social-card:hover {
@@ -167,6 +167,31 @@ body {
     width: 80px;
     height: 80px;
 }
+
+.social-card:nth-child(1):hover img {
+    content: url("../images/instagram.png");
+}
+
+/* .social-card:nth-child(2):hover img {
+    content: url("./assets/images/x-hover.png");
+} */
+
+.social-card:nth-child(4):hover img {
+    content: url("../images/yout.png");
+}
+
+.social-card:nth-child(5):hover img {
+    content: url("../images/fab.png");
+}
+.social-card:nth-child(6):hover img {
+    content: url("../images/link-active.png");
+}
+.social-card:nth-child(7):hover img {
+    content: url("../images/pint-ctive.png");
+}
+
+/* Repeat for other cards */
+
 
 .expert-section {
     padding: 100px 0px;
