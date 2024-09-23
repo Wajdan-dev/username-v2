@@ -140,16 +140,21 @@ body {
 
 }
 
+.social-box {
+    border-radius: 20px;
+    background: #FFFFFF80;
+}
+
 .social-card {
     border: 1.5px solid #2D2E3D33;
     min-height: 280px;
     cursor: pointer;
-    transition: .3s;
+    position: relative; /* Important for positioning hover image */
+    transition: background 0.3s ease;
 }
 
 .social-card:hover {
     background: linear-gradient(147.34deg, rgba(45, 46, 61, 0.025) 15.73%, rgba(45, 46, 61, 0.0375) 51.29%, rgba(45, 46, 61, 0.025) 84.79%);
-
 }
 
 .social-card h3 {
@@ -160,35 +165,34 @@ body {
     position: absolute;
     bottom: 14px;
     margin: 0;
-
 }
 
 .social-card img {
     width: 80px;
     height: 80px;
+    object-fit: contain;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
 
-.social-card:nth-child(1):hover img {
-    content: url("../images/instagram.png");
+.social-card .hover-img {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 80px;
+    height: 80px;
+    opacity: 0; /* Initially hidden */
+    object-fit: contain;
+    transition: opacity 0.3s ease; /* Smooth transition for hover image */
 }
 
-/* .social-card:nth-child(2):hover img {
-    content: url("./assets/images/x-hover.png");
-} */
-
-.social-card:nth-child(4):hover img {
-    content: url("../images/yout.png");
+.social-card:hover .hover-img {
+    opacity: 1; /* Show hover image on hover */
 }
 
-.social-card:nth-child(5):hover img {
-    content: url("../images/fab.png");
+.social-card:hover img:not(.hover-img) {
+    opacity: 0; /* Hide the original image */
 }
-.social-card:nth-child(6):hover img {
-    content: url("../images/link-active.png");
-}
-.social-card:nth-child(7):hover img {
-    content: url("../images/pint-ctive.png");
-}
+
 
 /* Repeat for other cards */
 
